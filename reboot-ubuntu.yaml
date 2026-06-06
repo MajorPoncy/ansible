@@ -1,0 +1,10 @@
+---
+- name: Reboot Ubuntu
+  hosts: all
+  gather_facts: no
+  become: true
+ 
+  tasks:
+    - name: Reboot the machine (Wait for 5 min)
+      reboot:
+        reboot_timeout: 300
